@@ -24,8 +24,8 @@ def load_json_file(file_path):
     return data
 
 class My_Document:
-  def __init__(self,page_content, title):
-    self.page_content = page_content
+  def __init__(self,summary, title):
+    self.page_content = summary
     self.metadata = {"title":title}
 
 
@@ -36,11 +36,6 @@ def extract_fields(data):
         if "summary" in item and "title" in item:
             summary = item["summary"]
             title = item["title"]
-            old_document = Document(
-                page_content=summary,
-                metadata={"title": title},
-            ),
-            metadata={"title": title},
             document = My_Document(summary, title)
 
             #print (document)
