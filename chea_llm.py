@@ -37,8 +37,6 @@ def extract_fields(data):
             summary = item["summary"]
             title = item["title"]
             document = My_Document(summary, title)
-
-            #print (document)
             documents.append(document)
     print ("number of documents: ", len(documents))
     return documents
@@ -53,13 +51,10 @@ def load_into_chroma(documents, database_name):
 def test(db,query):
     similar_docs = find_similiar_docs(db,query,k=3,score=True)
 
-    #print the top 3 results
+    #print the top 2 results
     i = 0 
     for doc in similar_docs[:3]:
-        print(i,": ",doc)
-        #print(doc.page_content)
-        #print(doc.score)
-        print("")
+        print(i,": ",doc,"\n")
         i = i+1
 
 def find_similiar_docs(db,query, k=3, score=True):
