@@ -1,4 +1,4 @@
-# Retrieva-augmented generation
+# Retrieval-augmented generation
 
 Here's some demo code to customize LLMs with career-coaching materials. More broadly, you can use this approach to customize an off-the-shelf LLM with documents from your private knowledge base.
 
